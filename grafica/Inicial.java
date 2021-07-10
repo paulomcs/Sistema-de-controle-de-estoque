@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package grafica;
 
-/**
- *
- * @author Acer
- */
+
 public class Inicial extends javax.swing.JFrame {
 
     /**
@@ -28,7 +21,6 @@ public class Inicial extends javax.swing.JFrame {
     private void initComponents() {
 
         CadastrarCliente = new javax.swing.JButton();
-        ExcluirCliente = new javax.swing.JButton();
         MostraProdutos = new javax.swing.JButton();
         TodosOsProdutos = new javax.swing.JButton();
         CadastrarVenda = new javax.swing.JButton();
@@ -48,8 +40,6 @@ public class Inicial extends javax.swing.JFrame {
                 CadastrarClienteActionPerformed(evt);
             }
         });
-
-        ExcluirCliente.setText("Excluir cliente");
 
         MostraProdutos.setText("Lista de produtos em estoque");
         MostraProdutos.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +97,6 @@ public class Inicial extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(CadastrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ExcluirCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ListaClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ProdutosIndisponiveis, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -120,17 +109,15 @@ public class Inicial extends javax.swing.JFrame {
                     .addComponent(MostraProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CadastrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(TodosOsProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(ExcluirCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(CadastrarVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(ListaClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TodosOsProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ListaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(HistoricoVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CadastrarVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ProdutosIndisponiveis, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(HistoricoVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -152,6 +139,9 @@ public class Inicial extends javax.swing.JFrame {
 
     private void ListaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaClientesActionPerformed
         dispose();
+        ListaClientes lc = new ListaClientes();
+        lc.setVisible(true);
+        lc.setLocationRelativeTo(null);
     }//GEN-LAST:event_ListaClientesActionPerformed
 
     private void ProdutosIndisponiveisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProdutosIndisponiveisActionPerformed
@@ -204,7 +194,6 @@ public class Inicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CadastrarCliente;
     private javax.swing.JButton CadastrarVenda;
-    private javax.swing.JButton ExcluirCliente;
     private javax.swing.JButton HistoricoVendas;
     private javax.swing.JButton ListaClientes;
     private javax.swing.JButton MostraProdutos;
